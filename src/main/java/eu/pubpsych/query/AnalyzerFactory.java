@@ -1,6 +1,3 @@
-/**
- * 
- */
 package eu.pubpsych.query;
 
 import java.util.Locale;

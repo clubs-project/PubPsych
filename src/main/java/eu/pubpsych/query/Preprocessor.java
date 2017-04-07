@@ -1,6 +1,3 @@
-/**
- * 
- */
 package eu.pubpsych.query;
 
 import java.io.BufferedWriter;
@@ -19,7 +16,11 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+
 /**
+ * Main class for pre-processing a file and convert it into a lowercased, tokenised,
+ * stop word-free and lemmatised version.
+ * 
  * @author cristinae
  * @since 07.04.2017
  */

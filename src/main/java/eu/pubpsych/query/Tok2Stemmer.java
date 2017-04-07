@@ -53,7 +53,7 @@ public class Tok2Stemmer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}			            
-
+		stemmedString = stemmedString.substring(0, stemmedString.length()-1);
 		return stemmedString;
 	}
 
@@ -68,7 +68,12 @@ public class Tok2Stemmer {
 	public static void main(String[] args) {
 
 		Tok2Stemmer t2s = new Tok2Stemmer(new Locale("en"));
-		String frase = t2s.processing("The houses are big and red we want to grow several trees consigned yesterday");
+		String text = "Such an analysis can reveal features that are not easily "
+				+ "visible from the variations in the individual genes and " 
+                + "can lead to a picture of expression that is more "
+                + "biologically transparent and accessible to interpretation ";
+
+		String frase = t2s.processing(text);
 		//t2s.processing("A ver como prerocesa los textos en castellano");
 		System.out.println(frase);
 	}

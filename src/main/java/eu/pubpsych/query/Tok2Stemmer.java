@@ -52,8 +52,12 @@ public class Tok2Stemmer {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}			            
-		stemmedString = stemmedString.substring(0, stemmedString.length()-1);
+		}	
+		if (stemmedString.length() > 1){ //remove last space
+			stemmedString = stemmedString.substring(0, stemmedString.length()-1);			
+		} else{
+			//stemmedString = "EMPTY";
+		}
 		return stemmedString;
 	}
 

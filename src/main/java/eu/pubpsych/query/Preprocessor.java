@@ -40,7 +40,8 @@ public class Preprocessor {
 	    FileWriter fw = null;
 	    BufferedWriter bw = null;
 		try {
-			fw = new FileWriter(fOut, true);
+			//fw = new FileWriter(fOut, true);
+			fw = new FileWriter(fOut);
 			bw = new BufferedWriter(fw);
 			bw.write("");
 		} catch (IOException e) {
@@ -58,6 +59,7 @@ public class Preprocessor {
 		        String line = sc.nextLine();
 		        String stemmedLine = t2s.processing(line);
 		        bw.append(stemmedLine);
+	        	bw.newLine();
 		        // Write every 10000 lines
 		        if (i%10000==0){
 		        	bw.flush();
@@ -83,7 +85,7 @@ public class Preprocessor {
 		    if (sc != null) {
 		        sc.close();
 		        try {
-		        	bw.newLine();
+//		        	bw.newLine();
 					bw.close();
 					fw.close();
 				} catch (IOException e) {
